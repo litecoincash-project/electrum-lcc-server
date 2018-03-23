@@ -644,7 +644,6 @@ class Litecoin(Coin):
         'eywr5eubdbbe2laq.onion s50008 t50007',
     ]
 
-
 class LitecoinTestnet(Litecoin):
     SHORTNAME = "XLT"
     NET = "testnet"
@@ -665,6 +664,20 @@ class LitecoinTestnet(Litecoin):
         'electrum-ltc.bysh.me s t',
         'electrum.ltc.xurious.com s t',
     ]
+
+
+class LitecoinCash(Litecoin):
+    NAME = "LitecoinCash"
+    SHORTNAME = "LCC"
+    NET = "mainnet"
+    P2PKH_VERBYTE = bytes.fromhex("1c")
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    TX_COUNT = 21580201
+    TX_COUNT_HEIGHT = 1388708
+    TX_PER_BLOCK = 6
+    RPC_PORT = 62457
+    REORG_LIMIT = 800
+    VALUE_PER_COIN = 10000000
 
 
 class Viacoin(AuxPowMixin, Coin):
