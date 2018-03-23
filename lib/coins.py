@@ -679,6 +679,8 @@ class LitecoinCash(Litecoin):
     REORG_LIMIT = 800
     VALUE_PER_COIN = 10000000
 
+    PEERS = []
+
 
 class Viacoin(AuxPowMixin, Coin):
     NAME="Viacoin"
