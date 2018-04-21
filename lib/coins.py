@@ -679,7 +679,10 @@ class LitecoinCash(Litecoin):
     REORG_LIMIT = 800
     VALUE_PER_COIN = 10000000
 
-    PEERS = []
+    PEERS = [
+        'electrum1.litecoinca.sh s50010 t50001',
+        'electrum2.litecoinca.sh s50010 t50001',
+    ]
 
 
 class Viacoin(AuxPowMixin, Coin):
